@@ -1,0 +1,3 @@
+goldenfish_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: GoldenfishBundle:Default:index }
