@@ -1,6 +1,6 @@
 <?php
 
-namespace GoldenfishBundle\DependencyInjection;
+namespace Goldenfish\GoldenfishBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;

@@ -17,9 +17,9 @@ class AppKernel extends Kernel
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new AppBundle\AppBundle(),
-            new GoldenfishBundle\GoldenfishBundle(),
             new FOS\UserBundle\FOSUserBundle(),
             new Goldenfish\UserBundle\UserBundle(),
+            new Goldenfish\GoldenfishBundle\GoldenfishBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'), true)) {

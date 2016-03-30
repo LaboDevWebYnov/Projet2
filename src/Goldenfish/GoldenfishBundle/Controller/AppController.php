@@ -1,6 +1,6 @@
 <?php
 
-namespace GoldenfishBundle\Controller;
+namespace Goldenfish\GoldenfishBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 

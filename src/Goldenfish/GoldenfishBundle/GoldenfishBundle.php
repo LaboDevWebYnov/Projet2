@@ -1,6 +1,6 @@
 <?php
 
-namespace GoldenfishBundle;
+namespace Goldenfish\GoldenfishBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
