@@ -3,11 +3,12 @@
 namespace Goldenfish\UserBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Request;
 
 class DefaultController extends Controller
 {
-    public function indexAction($name)
+    public function profileAction(Request $resquest)
     {
-        return $this->render('UserBundle:Default:index.html.twig', array('name' => $name));
+        return $this->render('UserBundle:Default:profile.html.twig');
     }
 }

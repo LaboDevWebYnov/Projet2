@@ -1,0 +1,17 @@
+{% block body %}
+
+    {% if error %}
+        <div class="alert alert-danger">{{ error.message }}</div>
+    {% endif %}
+
+    <form action="{{ path('fos_user_security_login') }}" method="post">
+        <label for="email">Email :</label>
+        <input type="text" id="email" name="_email" />
+
+        <label for="password">Password :</label>
+        <input type="password" id="password" name="_password" />
+        <br />
+        <input type="submit" value="Login" />
+    </form>
+
+{% endblock %}
