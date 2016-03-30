@@ -11,8 +11,8 @@ class AppController extends Controller
         return $this->render('GoldenfishBundle:App:index.html.twig');
     }
 
-    public function add_note(){
-    	
+    public function addNoteAction(){
+    	return $this->render('GoldenfishBundle:App:newnote.html.twig');
     }
 
 }
