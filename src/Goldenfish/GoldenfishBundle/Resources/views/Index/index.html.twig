@@ -1,5 +1,14 @@
 {% extends 'GoldenfishBundle::layout.html.twig' %}
 
+{% stylesheets 'css/bootstrap.min.css' %}
+<link rel="stylesheet" href="{{ asset_url }}" />
+{% endstylesheets %}
+
+{% javascripts 'js/jquery.min.js''js/bootstrap.min.js' %}
+<script src="{{ asset_url }}"></script>
+{% endjavascripts %}
+
 {% block GFN_body %}
 	<h1>Accueil</h1>
 {% endblock %}
+
