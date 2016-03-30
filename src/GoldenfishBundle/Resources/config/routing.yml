@@ -5,3 +5,7 @@ goldenfish_homepage:
 application_interface:
     path:    /app
     defaults: { _controller: GoldenfishBundle:App:indexApp}
+
+add_note:
+    path:    /app_add
+    defaults: { _controller: GoldenfishBundle:App:addNote}
