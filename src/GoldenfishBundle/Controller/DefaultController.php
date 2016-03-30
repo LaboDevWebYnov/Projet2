@@ -10,4 +10,9 @@ class DefaultController extends Controller
     {
         return $this->render('GoldenfishBundle:Index:index.html.twig');
     }
+
+    public function appAction()
+    {
+    	return $this->render('GoldenfishBundle:Index:app.html.twig');
+    }
 }

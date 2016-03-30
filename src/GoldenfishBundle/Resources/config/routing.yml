@@ -1,3 +1,7 @@
 goldenfish_homepage:
     path:     /index
     defaults: { _controller: GoldenfishBundle:Default:index }
+
+application_interface:
+    path:    /app
+    defaults: { _controller: GoldenfishBundle:Default:app}
