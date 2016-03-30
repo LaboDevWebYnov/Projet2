@@ -4,4 +4,4 @@ goldenfish_homepage:
 
 application_interface:
     path:    /app
-    defaults: { _controller: GoldenfishBundle:Default:app}
+    defaults: { _controller: GoldenfishBundle:App:indexApp}
