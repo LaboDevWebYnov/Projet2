@@ -36,7 +36,7 @@ class Note
     private $content;
 
     /**
-     * @ORM\ManyToOne(targetEntity="Goldenfish\UserBundle\User")
+     * @ORM\ManyToOne(targetEntity="Goldenfish\UserBundle\Entity\User")
      */
     private $user;
 
