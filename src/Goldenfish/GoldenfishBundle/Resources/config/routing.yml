@@ -13,3 +13,10 @@ add_note:
 save_note:
     path:    /app/save
     defaults: { _controller: GoldenfishBundle:App:saveNote}
+
+remove_trailing_slash:
+    path: /{url}
+    defaults: { _controller: GoldenfishBundle:Default:removeTrailingSlash }
+    requirements:
+        url: .*/$
+    methods: [GET]
