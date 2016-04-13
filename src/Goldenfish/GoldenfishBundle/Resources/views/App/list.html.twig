@@ -1,0 +1,10 @@
+{% extends 'GoldenfishBundle::layout.html.twig' %}
+
+{% block GFN_body %}
+
+{% for note in listNote %}
+	<p>{{ note.title }}</p>
+	<p>{{ note.user }}</p>
+	<p>{{ note.content }}</p>
+	<p>{{ note.dateCreation }}</p>
+{% endfor %}
