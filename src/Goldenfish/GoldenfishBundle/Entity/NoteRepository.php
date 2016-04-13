@@ -10,4 +10,14 @@ namespace Goldenfish\GoldenfishBundle\Entity;
  */
 class NoteRepository extends \Doctrine\ORM\EntityRepository
 {
+	public function getNoteWithUser($id)
+	{
+		$qb = $this->_em->createQuery(
+			'SELECT n
+			FROM GoldenfishBundle:Note n
+			WHERE n.user = :id')->setParameter('id', $id);
+		$results = $qb->getResult();
+
+		return $results
+	}
 }
