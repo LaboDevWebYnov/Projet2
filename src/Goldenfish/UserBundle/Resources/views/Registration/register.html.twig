@@ -1,20 +1,6 @@
-{% block body %}
-
-
-    <form action="{{ path('fos_user_security_register') }}" method="post">
-        <label for="username">Username :</label>
-        <input type="text" id="username" name="_username" value="{{ form.username }}" />
-        <br />
-        <label for="email">Email :</label>
-        <input type="email" id="email" name="_email" />
-        <br />
-        <label for="password">Password :</label>
-        <input type="password" id="password" name="_password" />
-        <br />
-        <label for="password">Password Confirmation :</label>
-        <input type="password" id="password" name="_password" />
-
-        <input type="submit" value="Register" />
-    </form>
-
-{% endblock %}
+<form action="{{ path('fos_user_registration_register') }}" {{ form_enctype(form) }} method="POST" class="fos_user_registration_register">
+    {{ form_widget(form) }}
+    <div>
+        <input type="submit" value="{{ 'registration.submit'|trans }}" />
+    </div>
+</form>
