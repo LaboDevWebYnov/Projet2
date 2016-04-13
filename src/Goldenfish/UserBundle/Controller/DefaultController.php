@@ -9,6 +9,6 @@ class DefaultController extends Controller
 {
     public function profileAction(Request $resquest)
     {
-        return $this->render('UserBundle:Default:profile.html.twig');
+        return $this->render('UserBundle:Security:check.html.twig');
     }
 }
