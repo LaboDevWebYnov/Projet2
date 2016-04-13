@@ -86,6 +86,10 @@ fos_user:
     firewall_name: main
     user_class:    Goldenfish\UserBundle\Entity\User
     use_username_form_type: false
+    registration:
+        form:
+            type: app_user_registration
     profile:
       form:
         type: app_user_profile
+
