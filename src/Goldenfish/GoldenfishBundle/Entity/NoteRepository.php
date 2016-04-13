@@ -18,6 +18,6 @@ class NoteRepository extends \Doctrine\ORM\EntityRepository
 			WHERE n.user = :id')->setParameter('id', $id);
 		$results = $qb->getResult();
 
-		return $results
+		return $results;
 	}
 }

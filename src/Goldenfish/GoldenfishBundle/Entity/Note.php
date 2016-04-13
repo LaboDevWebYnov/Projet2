@@ -107,6 +107,30 @@ class Note
     }
 
     /**
+     * Set dateCreation
+     *
+     * @param date $dateCreation
+     *
+     * @return Note
+     */
+    public function setDateCreation($date)
+    {
+        $this->dateCreation = $date;
+
+        return $this;
+    }
+
+    /**
+     * Get dateCreation
+     *
+     * @return date
+     */
+    public function getDateCreation()
+    {
+        return $this->dateCreation;
+    }
+
+    /**
      * Set user
      *
      * @param \Goldenfish\UserBundle\User $user
