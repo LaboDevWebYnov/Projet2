@@ -36,6 +36,13 @@ class Note
     private $content;
 
     /**
+     * @var date
+     *
+     * @ORM\Column(name="dateCreation", type="date")
+     */
+    private $dateCreation;
+
+    /**
      * @ORM\ManyToOne(targetEntity="Goldenfish\UserBundle\Entity\User")
      */
     private $user;

@@ -28,4 +28,17 @@ class AppController extends Controller
     	));
     }
 
+    public function viewListNoteAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $usercourant = $this->container->get('security.context')->getToken()->getUser()->getId();
+
+        $listNote = $em->getRepository('GoldenfishBundle:Note')->getNoteWithUser($usercourant);
+
+        return $this->render('GoldenfishBundle:App:list.html.twig', array(
+            'usercourant' => $usercourant,
+            'listNote' => $listNote));
+    }
+
 }
