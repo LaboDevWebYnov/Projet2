@@ -90,6 +90,6 @@ fos_user:
         form:
             type: app_user_registration
     profile:
-      form:
-        type: app_user_profile
+        form:
+            type: app_user_profile
 

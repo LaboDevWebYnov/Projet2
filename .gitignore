@@ -9,11 +9,6 @@
 /vendor/
 /.idea/*
 /web/
-<<<<<<< HEAD
-.idea/workspace.xml
-.idea/workspace.xml
-=======
->>>>>>> origin/master
 .idea/workspace.xml
 .idea/workspace.xml
 .idea/Projet2.iml
