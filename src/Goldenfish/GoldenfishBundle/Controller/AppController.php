@@ -50,7 +50,7 @@ class AppController extends Controller
 
         $usercourant = $this->container->get('security.context')->getToken()->getUser()->getId();
 
-        $listNote = $em->getRepository('GoldenfishBundle:Note')->findAll()getNoteWithUser($usercourant);
+        $listNote = $em->getRepository('GoldenfishBundle:Note')->getNoteWithUser($usercourant);
 
         return $this->render('GoldenfishBundle:App:list.html.twig', array(
             'usercourant' => $usercourant,
