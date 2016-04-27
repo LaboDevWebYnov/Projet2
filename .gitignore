@@ -11,3 +11,7 @@
 /web/
 .idea/workspace.xml
 .idea/workspace.xml
+.idea/Projet2.iml
+web/config.php
+composer.lock
+.idea/workspace.xml
