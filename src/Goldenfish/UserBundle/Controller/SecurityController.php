@@ -12,7 +12,7 @@ class SecurityController extends Controller
     public function loginAction(Request $request)
     {
         if ($this->get('security.context')->isGranted('IS_AUTHENTICATED_REMEMBERED')) {
-            return $this->redirectToRoute('UserBundle:Profile:profile.html.twig');
+            return $this->redirectToRoute('UserBundle:Profile:show_content.html.twig');
         }
 
         $authenticationUtils = $this->get('security.authentication_utils');
