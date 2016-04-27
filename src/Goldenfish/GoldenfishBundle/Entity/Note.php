@@ -109,11 +109,11 @@ class Note
     /**
      * Set user
      *
-     * @param \Goldenfish\UserBundle\User $user
+     * @param \Goldenfish\UserBundle\Entity\User $user
      *
      * @return Note
      */
-    public function setUser(\Goldenfish\UserBundle\User $user = null)
+    public function setUser(\Goldenfish\UserBundle\Entity\User $user = null)
     {
         $this->user = $user;
 
@@ -123,7 +123,7 @@ class Note
     /**
      * Get user
      *
-     * @return \Goldenfish\UserBundle\User
+     * @return \Goldenfish\UserBundle\Entity\User
      */
     public function getUser()
     {
