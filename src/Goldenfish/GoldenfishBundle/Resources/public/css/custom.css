@@ -133,6 +133,10 @@ ul[name="navbar"]{
     color: #e80317;
 }
 
+.connection {
+    margin-top: 10px;
+}
+
 #pricing .pricing .btn:hover{
     background: #e80317 none repeat scroll 0 0;
 }

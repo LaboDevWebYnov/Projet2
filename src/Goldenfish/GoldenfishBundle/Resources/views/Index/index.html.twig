@@ -28,7 +28,7 @@
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right text-uppercase" name="navbar">
                     <li><a href="#home">Home</a></li>
-                    <li><a href="#connection">Connexion</a></li>
+                    <li><a href="#pricing">Connexion</a></li>
                     <li><a href="#description">Description</a></li>
                     <li><a href="#team">Team</a></li>
                     <li><a href="#contact">Contact</a></li>
@@ -57,7 +57,7 @@
     </section>
 
     <!-- Connexion/Register -->
-    <section id="connection">
+    <section id="pricing">
         <div class="container">
             <div class="col-md-12">
                 <div class="row">
@@ -70,21 +70,30 @@
                         <div class="pricing-title">
                             <h4>Connexion</h4>
                         </div>
-                        <form action="{{ path('fos_user_security_check') }}" method="post">
-                            <input type="hidden" name="_csrf_token" value="{{ csrf_token }}"/>
+                        <div class="connection">
+                            <form action="{{ path('fos_user_security_check') }}" method="post">
+                                <input type="hidden" name="_csrf_token" value="{{ csrf_token }}"/>
 
-                            <label for="username">Login</label>
-                            <input type="text" id="username" name="_username" required="required" />
+                                <br/>
+                                <label for="username">Login
+                                    <br/>
+                                    <input type="text" id="username" name="_username" required="required" />
+                                    <br/>
+                                </label>
 
-                            <label for="password">Mot de passe</label>
-                            <input type="password" id="password" name="_password" required="required" />
+                                <label for="password">Mot de passe
+                                    <input type="password" id="password" name="_password" required="required" />
+                                    <br/>
+                                </label>
 
-                            <input type="checkbox" id="remember_me" name="_remember_me" value="on" />
-                            <label for="remember_me">Se souvenir de moi</label>
-                            
-                            <input class="btn btn-primary text-uppercase" type="submit" id="_submit" name="_submit" value="connexion" />
-                        </form>
+                                <label for="remember_me">Se souvenir de moi
+                                    <input type="checkbox" id="remember_me" name="_remember_me" value="on" />
+                                    <br/>
+                                </label>
 
+                                <input class="btn btn-primary text-uppercase" type="submit" id="_submit" name="_submit" value="connexion" />
+                            </form>
+                        </div>
                     </div>
                 </div>
 
