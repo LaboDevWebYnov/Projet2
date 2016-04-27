@@ -1,5 +1,4 @@
 .notes{
-	border : black solid 2px;
 	margin-top: 20px;
 	width: 23.5%;
 	text-align: center;
@@ -8,6 +7,8 @@
 	color: white;
 	display: inline-block;
 	margin-left: 15px;
+	border-radius: 5px;
+
 
 
 }
@@ -15,8 +16,98 @@
 	white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    height: 150px;
 }
 .notes:hover 
 { 
 	opacity: 0.7; 
 } 
+#formNewNote{
+	 width: 40%;
+    padding:30px;
+    margin:40px auto;
+    background: #FFF;
+    border-radius: 10px;
+    -webkit-border-radius:10px;
+    -moz-border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.13);
+    -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.13);
+    -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.13);
+}
+#newNote{
+	margin-top: 5%;
+	background: #FE9A2E;
+  background-image: -webkit-linear-gradient(top, #FE9A2E, #ff7700);
+  background-image: -moz-linear-gradient(top, #FE9A2E, #ff7700);
+  background-image: -ms-linear-gradient(top, #FE9A2E, #ff7700);
+  background-image: -o-linear-gradient(top, #FE9A2E, #ff7700);
+  background-image: linear-gradient(to bottom, #FE9A2E, #ff7700);
+  
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 16px;
+  padding: 8px 20px 10px 20px;
+  border: solid #ff9900 0.5px;
+  text-decoration: none;
+}
+#newNote:hover{
+	background: #ffb700;
+  background-image: -webkit-linear-gradient(top, #ffb700, #f7bd48);
+  background-image: -moz-linear-gradient(top, #ffb700, #f7bd48);
+  background-image: -ms-linear-gradient(top, #ffb700, #f7bd48);
+  background-image: -o-linear-gradient(top, #ffb700, #f7bd48);
+  background-image: linear-gradient(to bottom, #ffb700, #f7bd48);
+  text-decoration: none;
+}
+#inputNote{
+	margin-bottom: 3%;
+	width: 20%;
+	padding: 15px 25px;
+	
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-weight: 400;
+	font-size: 14px;
+	color: #9d9e9e;
+	text-shadow: 1px 1px 0 rgba(256,256,256,1.0);
+	
+	background: #fff;
+	border: 1px solid #fff;
+	border-radius: 5px;
+	
+	box-shadow: inset 0 1px 3px rgba(0,0,0,0.50);
+	-moz-box-shadow: inset 0 1px 3px rgba(0,0,0,0.50);
+	-webkit-box-shadow: inset 0 1px 3px rgba(0,0,0,0.50);
+	transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-webkit-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	-ms-transition: all 0.5s ease;
+
+}
+#inputNote:hover{
+	background: #dfe9ec;
+	color: #414848;
+}
+#inputNote:focus{
+	outline:  none;
+	background: #dfe9ec;
+	color: #414848;
+	
+	box-shadow: inset 0 1px 2px rgba(0,0,0,0.25);
+	-moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.25);
+	-webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.25);
+}
+#header{
+	font-family: arial;
+	 width: 40%;
+  line-height: 45px;
+  margin: 50px auto;
+  font-size: 20px;
+  font-weight: 500;
+  color: white;
+  color: rgba(white, .95);
+  text-align: center;
+  text-shadow: 0 1px rgba(black, .3);
+  background: #FE9A2E;
+  border-radius: 3px;
+}

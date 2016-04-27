@@ -7,57 +7,58 @@
   <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
 
   <!-- Include Editor style. -->
-  <link href="../../bundles/goldenfish/froala/css/froala_editor.min.css" rel="stylesheet" type="text/css" />
-  <link href="../../bundles/goldenfish/froala/css/froala_style.min.css" rel="stylesheet" type="text/css" />
+  <link href="../bundles/goldenfish/froala/css/froala_editor.min.css" rel="stylesheet" type="text/css" />
+  <link href="../bundles/goldenfish/froala/css/froala_style.min.css" rel="stylesheet" type="text/css" />
 
   <!-- Include Code Mirror style -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.3.0/codemirror.min.css">
 
   <!-- Include Editor Plugins style. -->
-  <link rel="stylesheet" href="../../bundles/goldenfish/froala/css/plugins/char_counter.css">
-  <link rel="stylesheet" href="../../bundles/goldenfish/froala/css/plugins/code_view.css">
-  <link rel="stylesheet" href="../../bundles/goldenfish/froala/css/plugins/colors.css">
-  <link rel="stylesheet" href="../../bundles/goldenfish/froala/css/plugins/emoticons.css">
-  <link rel="stylesheet" href="../../bundles/goldenfish/froala/css/plugins/file.css">
-  <link rel="stylesheet" href="../../bundles/goldenfish/froala/css/plugins/fullscreen.css">
-  <link rel="stylesheet" href="../../bundles/goldenfish/froala/css/plugins/image.css">
-  <link rel="stylesheet" href="../../bundles/goldenfish/froala/css/plugins/image_manager.css">
-  <link rel="stylesheet" href="../../bundles/goldenfish/froala/css/plugins/line_breaker.css">
-  <link rel="stylesheet" href="../../bundles/goldenfish/froala/css/plugins/quick_insert.css">
-  <link rel="stylesheet" href="../../bundles/goldenfish/froala/css/plugins/table.css">
-  <link rel="stylesheet" href="../../bundles/goldenfish/froala/css/plugins/video.css">
+  <link rel="stylesheet" href="../bundles/goldenfish/froala/css/plugins/char_counter.css">
+  <link rel="stylesheet" href="../bundles/goldenfish/froala/css/plugins/code_view.css">
+  <link rel="stylesheet" href="../bundles/goldenfish/froala/css/plugins/colors.css">
+  <link rel="stylesheet" href="../bundles/goldenfish/froala/css/plugins/emoticons.css">
+  <link rel="stylesheet" href="../bundles/goldenfish/froala/css/plugins/file.css">
+  <link rel="stylesheet" href="../bundles/goldenfish/froala/css/plugins/fullscreen.css">
+  <link rel="stylesheet" href="../bundles/goldenfish/froala/css/plugins/image.css">
+  <link rel="stylesheet" href="../bundles/goldenfish/froala/css/plugins/image_manager.css">
+  <link rel="stylesheet" href="../bundles/goldenfish/froala/css/plugins/line_breaker.css">
+  <link rel="stylesheet" href="../bundles/goldenfish/froala/css/plugins/quick_insert.css">
+  <link rel="stylesheet" href="../bundles/goldenfish/froala/css/plugins/table.css">
+  <link rel="stylesheet" href="../bundles/goldenfish/froala/css/plugins/video.css">
+  <link rel="stylesheet" href="../bundles/goldenfish/css/note.css">
 <head>
 
 <body>
 
-  <h1>Nouvelle Note </h1>
-  <br/>
+  
   <!-- Create a tag that we will use as the editable area.
        You can use a div tag as well. -->
-
-  <a onclick="$('#edit').froalaEditor('save.save');">Sauvegarder une note</a>
-
-  <form action="{{ path('save_note') }}" method="POST">
-  	<p>Name : <input name="note_name" placeholder="My_Note" width="30px" /> </p>
+  <h1 id="header">Nouvelle Note </h1>
+  
+  <form id="formNewNote" action="{{ path('save_note') }}" method="POST">
+  	<input id="inputNote" name="note_name" placeholder="Name" /> 
     <textarea id="edit" name="note_content"></textarea>
-    <button>Submit</button>
+    <button id="newNote">Submit</button>
+    
   </form>
+  <!-- <a onclick="$('#edit').froalaEditor('save.save');">Sauvegarder une note</a> -->
 
   <!-- Include jQuery. -->
   <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 
   <!-- Include JS files. -->
-  <script type="text/javascript" src="../../bundles/goldenfish/froala/js/froala_editor.min.js"></script>
+  <script type="text/javascript" src="../bundles/goldenfish/froala/js/froala_editor.min.js"></script>
 
   <!-- Include Code Mirror. -->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.3.0/codemirror.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.3.0/mode/xml/xml.min.js"></script>
 
  <!-- Include Plugins. -->
-  <script type="text/javascript" src="../../bundles/goldenfish/froala/js/plugins/save.min.js"></script>
+  <script type="text/javascript" src="../bundles/goldenfish/froala/js/plugins/save.min.js"></script>
 
   <!-- Include Language file if we want to use it. -->
-  <script type="text/javascript" src="../../bundles/goldenfish/froala/js/languages/ro.js"></script>
+  <script type="text/javascript" src="../bundles/goldenfish/froala/js/languages/ro.js"></script>
 
   <!-- Initialize the editor. -->
   <script>
