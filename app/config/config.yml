@@ -89,6 +89,10 @@ fos_user:
     registration:
         form:
             type: app_user_registration
+        confirmation:
+            from_email:
+                address:        bito.hamnache@gmail.com
+                sender_name:    Demo Registration
     profile:
         form:
             type: app_user_profile
