@@ -48,4 +48,7 @@
 
  
         });
+
+    $("#corps").load("app/list"); 
+
 });

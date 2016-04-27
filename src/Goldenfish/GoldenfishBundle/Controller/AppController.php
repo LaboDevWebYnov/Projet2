@@ -42,10 +42,11 @@ class AppController extends Controller
 
         $em->flush();
 
-    	return $this->render('GoldenfishBundle:App:save.html.twig',  array(
+        return $this->redirectToRoute('application_interface');
+    	/*return $this->render('GoldenfishBundle:App:save.html.twig',  array(
     		'name' => $data->get('note_name'),
     		'body' => $data->get('note_content')
-    	));
+    	));*/
     }
 
     public function viewListNoteAction()

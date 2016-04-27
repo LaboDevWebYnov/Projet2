@@ -10,9 +10,9 @@ class DefaultController extends Controller
 {
     public function indexAction(Request $request)
     {
-        if ($this->get('security.context')->isGranted('IS_AUTHENTICATED_REMEMBERED')) {
+        /*if ($this->get('security.context')->isGranted('IS_AUTHENTICATED_REMEMBERED')) {
             return $this->redirectToRoute('UserBundle:Profile:profile.html.twig');
-        }
+        }*/
 
         $authenticationUtils = $this->get('security.authentication_utils');
 
