@@ -7,6 +7,7 @@ use Symfony\Component\HttpFoundation\Request;
 
 //Entity
 use Goldenfish\GoldenfishBundle\Entity\Note;
+use Goldenfish\UserBundle\Entity\User;
 
 
 class AppController extends Controller
@@ -29,10 +30,13 @@ class AppController extends Controller
         $em = $this->getDoctrine()->getManager();
         $em->getRepository('GoldenfishBundle:Note');
 
+        $user = $this->container->get('security.context')->getToken()->getUser();
+
         $note = new Note();
         $note->setTitle($data->get('note_name'));
         $note->setContent($data->get('note_content'));
         $note->setDateCreation(new \DateTime());
+        $note->setUser($user);
 
         $em->persist($note);
 
