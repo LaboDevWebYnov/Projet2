@@ -1,28 +1,14 @@
-<<<<<<< Updated upstream
-{% stylesheets 'css/bootstrap.min.css' %}
-<link rel="stylesheet" href="{{ asset_url }}" />
-{% endstylesheets %}
-=======
 <html>
 <head>
     <!-- bootstrap css -->
-    {% stylesheets 'css/bootstrap.min.css' %}
-    <link rel="stylesheet" href="{{ asset_url }}" />
-    {% endstylesheets %}
+    <link rel="stylesheet" href="../bundles/goldenfish/css/bootstrap.min.css" />
 
     <!-- google font -->
     <!--<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,700,800' rel='stylesheet' type='text/css'>-->
 
     <!-- custom css -->
-    {% stylesheets 'css/templatemo-style.css' %}
-    <link rel="stylesheet" href="{{ asset_url }}" />
-    {% endstylesheets %}
-    {% stylesheets 'css/style.css' %}
-    <link rel="stylesheet" href="{{ asset_url }}" />
-    {% endstylesheets %}
-    {% stylesheets 'css/custom.css' %}
-    <link rel="stylesheet" href="{{ asset_url }}" />
-    {% endstylesheets %}
+    <link rel="stylesheet" href="../bundles/goldenfish/css/templatemo-style.css" />
+    <link rel="stylesheet" href="../bundles/goldenfish/css/custom.css" />
 
 </head>
 
@@ -37,12 +23,12 @@
                     <span class="icon icon-bar"></span>
                     <span class="icon icon-bar"></span>
                 </button>
-                <a href="#" class="navbar-brand">GF</a>
+                <a href="#" class="navbar-brand">Golden Fish</a>
             </div>
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right text-uppercase" name="navbar">
                     <li><a href="#home">Home</a></li>
-                    <li><a href="#princing">Connexion</a></li>
+                    <li><a href="#connection">Connexion</a></li>
                     <li><a href="#description">Description</a></li>
                     <li><a href="#team">Team</a></li>
                     <li><a href="#contact">Contact</a></li>
@@ -56,10 +42,13 @@
             <div class="container">
                 <div class="row">
                     <!--<div class="col-md-1"></div>-->
-                    <div class="col-md-10 wow fadeIn">
-                        <h1 class="text-upper">Bienvenue sur Golden Fish</h1>
-                        <p class="tm-white"></p>
-                        <!--<img src="image/home-bg.jpg" class="img-responsive" alt="home img">-->
+                    <div class="col-md-12 wow fadeIn">
+                        <p class="text-center">
+                            <h2 class="text-upper">Mémoire de poisson rouge ?</h2>
+                            <p class="tm-white">N'oubliez plus rien et notez toutes vos pensées.</p>
+                            <p class="tm-white">Golden-Fish Note vous aidera à vous souvenir de tout !</p>
+                            <!--<img src="../bundles/goldenfish/image/home-bg.jpg" class="img-responsive" alt="home img">-->
+                        </p>
                     </div>
                     <!--<div class="col-md-1"></div>-->
                 </div>
@@ -68,7 +57,7 @@
     </section>
 
     <!-- Connexion/Register -->
-    <section id="pricing">
+    <section id="connection">
         <div class="container">
             <div class="col-md-12">
                 <div class="row">
@@ -81,24 +70,21 @@
                         <div class="pricing-title">
                             <h4>Connexion</h4>
                         </div>
-                        <form method="post" action="">
-                            <ul>
-                                <li>
-                                    <p><label>Mail :</label>
-                                        <br><input type="text" name="mail" />
-                                    </p>
-                                </li>
-                                <li>
-                                    <p>
-                                        <label>Password :</label><input type="password" name="password" />
-                                    </p>
-                                </li>
-                                <li>
-                                    <p>
-                                        <input class="btn btn-primary text-uppercase" type="submit" id="button" value="Login">
-                                    </p>
-                                </li>
+                        <form action="{{ path('fos_user_security_check') }}" method="post">
+                            <input type="hidden" name="_csrf_token" value="{{ csrf_token }}"/>
+
+                            <label for="username">Login</label>
+                            <input type="text" id="username" name="_username" required="required" />
+
+                            <label for="password">Mot de passe</label>
+                            <input type="password" id="password" name="_password" required="required" />
+
+                            <input type="checkbox" id="remember_me" name="_remember_me" value="on" />
+                            <label for="remember_me">Se souvenir de moi</label>
+                            
+                            <input class="btn btn-primary text-uppercase" type="submit" id="_submit" name="_submit" value="connexion" />
                         </form>
+
                     </div>
                 </div>
 
@@ -107,7 +93,7 @@
                         <div class="pricing-title">
                             <h4>Inscription</h4>
                         </div>
-                        <form method="post" action="index.php">
+                        <form method="post" action="">
                             <ul>
                                 <li>
                                     <p><label for="pseudo">Pseudo :</label><br><input type="text" id="pseudo" name="pseudo"/>
@@ -128,7 +114,6 @@
                                         <input type="password" id="Password" name="Password" maxlength="200">
                                     </p>
                                 </li>
->>>>>>> Stashed changes
 
                                 <li>
                                     <p>
@@ -193,7 +178,7 @@
                             <h2 class="text-center">Chef de laboratoire</h2>
                             <div class="col-md-4"></div>`
                             <div class="col-md-4">
-                                <img src="image/marjo.png"  class="img-circle">
+                                <img src="../bundles/goldenfish/image/marjo.png"  class="img-circle">
                             </div>
                             <div class="col-md-4"></div>
                         </div>
@@ -202,7 +187,7 @@
                             <h2 class="text-center">Chef de Projet</h2>
                             <div class="col-md-4"></div>`
                             <div class="col-md-4">
-                                <img src="image/Etienne.jpg"  class="img-circle">
+                                <img src="../bundles/goldenfish/image/Etienne.jpg"  class="img-circle">
                             </div>
                             <div class="col-md-4"></div>
                         </div>
@@ -210,19 +195,19 @@
                         <div class="col-md-12">
                             <h2 class="text-center">Développeurs</h2>
                             <div class="col-md-4">
-                                <img src="image/benjirouq.png" class="img-circle">
+                                <img src="../bundles/goldenfish/image/benjirouq.png" class="img-circle">
                             </div>
                             <div class="col-md-4">
-                                <img src="image/champo.png" class="img-circle">
+                                <img src="../bundles/goldenfish/image/champo.png" class="img-circle">
                             </div>
                             <div class="col-md-4">
-                                <img src="image/esra.jpg" class="img-circle">
+                                <img src="../bundles/goldenfish/image/esra.jpg" class="img-circle">
                             </div>
                         </div>
                         <div class="col-md-12">
                             <div class="col-md-2"></div>
                             <div class="col-md-8">
-                                <img src="image/thibo.jpg" class="img-circle">
+                                <img src="../bundles/goldenfish/image/thibo.jpg" class="img-circle">
                             </div>
                             <div class="col-md-2"></div>
                         </div>
@@ -230,13 +215,13 @@
                         <div class="col-md-12">
                             <h2 class="text-center">Commerciaux</h2>
                             <div class="col-md-4">
-                                <img src="image/anais.jpg" class="img-circle">
+                                <img src="../bundles/goldenfish/image/anais.jpg" class="img-circle">
                             </div>
                             <div class="col-md-4">
-                                <img src="image/cyril.jpg" class="img-circle">
+                                <img src="../bundles/goldenfish/image/cyril.jpg" class="img-circle">
                             </div>
                             <div class="col-md-4">
-                                <img src="image/esra.jpg" class="img-circle">
+                                <img src="../bundles/goldenfish/image/esra.jpg" class="img-circle">
                             </div>
                         </div>
                         <!-- Manaa -->
@@ -244,7 +229,7 @@
                             <h2 class="text-center">Artiste</h2>
                             <div class="col-md-2"></div>
                             <div class="col-md-8">
-                                <!-- <img src="image/cyril.jpg" class="img-circle">-->
+                                <!-- <img src="../bundles/goldenfish/image/cyril.jpg" class="img-circle">-->
                             </div>
                             <div class="col-md-2"></div>
                         </div>
@@ -288,18 +273,15 @@
             </div>
         </div>
     </section>
-    </div>
+</div>
 </body>
 <footer>
     <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>-->
-    {% javascripts 'js/jquery.js''js/bootstrap.min.js' %}
-    <script src="{{ asset_url }}"></script>
-    {% endjavascripts %}
+    <script src="../bundles/goldenfish/js/jquery.js"></script>
+    <script src="../bundles/goldenfish/js/bootstrap.min.js"></script>
 </footer>
+<<<<<<< Updated upstream
 </html>
-
-{% extends 'GoldenfishBundle::layout.html.twig' %}
-
-<div class="header col-md-12">
- wesdxrgfcthgvjbknl,;m
-</div>
+=======
+</html>
+>>>>>>> Stashed changes
