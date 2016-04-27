@@ -105,10 +105,17 @@ ul[name="navbar"]{
 }
 #home p
 {
+    color: #e80317;
     font-weight: 400;
+    font-size: x-large;
     font-style: italic;
     line-height: 2em;
 }
+
+#home h2{
+    color: #e80317;
+}
+
 #home img
 {
     display: inline-block;
