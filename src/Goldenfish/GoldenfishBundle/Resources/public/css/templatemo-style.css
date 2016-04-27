@@ -278,6 +278,7 @@ img
         background: url('../images/contact-bg.jpg') no-repeat;
         background-size: cover;
         color: #000;
+        margin-top: 800px;
     }
 #contact h2
     {

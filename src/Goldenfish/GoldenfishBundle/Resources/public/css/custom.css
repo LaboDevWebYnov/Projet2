@@ -94,6 +94,13 @@ ul[name="navbar"]{
 /* end navigation */
 
 /* start home */
+
+label[for="forget_password"]{
+    margin-top: 12px;
+    margin-bottom: -15px;
+    font-size: 11px;
+}
+
 #home
 {
     background: url('../image/home-bg.jpg') no-repeat;
