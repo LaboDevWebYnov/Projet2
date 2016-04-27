@@ -67,26 +67,6 @@
                         <div class="pricing-title">
                             <h4>Connexion</h4>
                         </div>
-<<<<<<< HEAD
-                        <form method="post" action="">
-                            <ul>
-                                <li>
-                                    <p><label>Mail :</label>
-                                        <br><input type="text" name="mail" />
-                                    </p>
-                                </li>
-                                <li>
-                                    <p>
-                                        <label>Password :</label><input type="password" name="password" />
-                                    </p>
-                                </li>
-                                <li>
-                                    <p>
-                                        <input class="btn btn-primary text-uppercase" type="submit" id="button" value="Login">
-                                    </p>
-                                </li>
-                            </ul>
-=======
                         <form action="{{ path('fos_user_security_check') }}" method="post">
                             <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
 
@@ -102,7 +82,6 @@
                             <input type="hidden" name="_target_path" value="/profile" />
 
                             <input class="btn btn-primary text-uppercase" type="submit" id="_submit" name="_submit" value="connexion" />
->>>>>>> origin/master
                         </form>
 
                     </div>
