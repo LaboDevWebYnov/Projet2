@@ -13,6 +13,7 @@ services:
         class: Goldenfish\UserBundle\Form\Type\ProfileFormType
         tags:
             - { name: form.type, alias: app_user_profile }
+
     app.form.registration:
         class: Goldenfish\UserBundle\Form\Type\RegistrationFormType
         arguments: [%fos_user.model.user.class%]
