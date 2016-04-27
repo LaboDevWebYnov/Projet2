@@ -92,7 +92,7 @@ fos_user:
         confirmation:
             enabled: true
             from_email:
-                address:        tienou42@gmail.com
+                address:        goldenfishnoteappli@gmail.com
                 sender_name:    Demo Registration
     profile:
         form:
