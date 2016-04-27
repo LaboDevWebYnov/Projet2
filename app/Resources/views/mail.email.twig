@@ -1,0 +1,16 @@
+
+{% block subject %}Activation{% endblock %}
+
+{% block body_text %}
+    {% autoescape false %}
+        Bonjour {{ user.username }} !
+
+        Pour activer votre compte veuillez cliquez sur le lien suivant : {{ confirmationUrl }}
+
+
+        A vos notes :)
+
+        L'équipe GoldenFish vous remercie de votre soutient.
+    {% endautoescape %}
+{% endblock %}
+

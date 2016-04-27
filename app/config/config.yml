@@ -94,6 +94,8 @@ fos_user:
             from_email:
                 address:        goldenfishnoteappli@gmail.com
                 sender_name:    Demo Registration
+                template: email/mail.email.twig
+
     profile:
         form:
             type: app_user_profile
