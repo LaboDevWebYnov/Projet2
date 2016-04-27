@@ -67,24 +67,23 @@
                         <div class="pricing-title">
                             <h4>Connexion</h4>
                         </div>
-                        <form method="post" action="">
-                            <ul>
-                                <li>
-                                    <p><label>Mail :</label>
-                                        <br><input type="text" name="mail" />
-                                    </p>
-                                </li>
-                                <li>
-                                    <p>
-                                        <label>Password :</label><input type="password" name="password" />
-                                    </p>
-                                </li>
-                                <li>
-                                    <p>
-                                        <input class="btn btn-primary text-uppercase" type="submit" id="button" value="Login">
-                                    </p>
-                                </li>
+                        <form action="{{ path('fos_user_security_check') }}" method="post">
+                            <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+
+                            <label for="username">Login</label>
+                            <input type="text" id="username" name="_username" required="required" />
+
+                            <label for="password">Mot de passe</label>
+                            <input type="password" id="password" name="_password" required="required" />
+
+                            <input type="checkbox" id="remember_me" name="_remember_me" value="on" />
+                            <label for="remember_me">Se souvenir de moi</label>
+
+                            <input type="hidden" name="_target_path" value="/profile" />
+
+                            <input class="btn btn-primary text-uppercase" type="submit" id="_submit" name="_submit" value="connexion" />
                         </form>
+
                     </div>
                 </div>
 
