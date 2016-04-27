@@ -20,3 +20,7 @@ remove_trailing_slash:
     requirements:
         url: .*/$
     methods: [GET]
+
+list_note:
+    path:    /app/list
+    defaults: { _controller: GoldenfishBundle:App:viewListNote }

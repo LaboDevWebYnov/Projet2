@@ -1,10 +1,16 @@
-{% extends 'GoldenfishBundle::layout.html.twig' %}
 
+<link rel="stylesheet" href="../bundles/goldenfish/css/note.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 {% block GFN_body %}
 
 {% for note in listNote %}
-	<p>{{ note.title }}</p>
-	<p>{{ note.user }}</p>
-	<p>{{ note.content }}</p>
-	<p>{{ note.dateCreation|date('d/m/Y') }}</p>
+	<div class="notes">
+		<p>{{ note.title }}</p>
+		<p>{{ note.user }}</p>
+		<p class="noteContent">{{ note.content }}</p>
+		<p>{{ note.dateCreation|date('d/m/Y') }}</p>
+	</div>
 {% endfor %}
+        <script type="text/javascript" src="../bundles/goldenfish/js/jquery.js"></script>
+{% endblock %}
