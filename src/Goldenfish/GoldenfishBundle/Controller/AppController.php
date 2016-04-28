@@ -9,7 +9,10 @@ class AppController extends Controller
 {
     public function indexAppAction()
     {
-        return $this->render('GoldenfishBundle:App:index.html.twig');
+        $user = $this->container->get('security.context')->getToken()->getUser();
+
+        return $this->render('GoldenfishBundle:App:index.html.twig', array(
+            'user' => $user));
     }
     public function addNoteAction(){
         return $this->render('GoldenfishBundle:App:newnote.html.twig');
