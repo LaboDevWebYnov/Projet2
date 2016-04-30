@@ -1,0 +1,43 @@
+{% trans_default_domain 'UserBundle' %}
+<div id="second-wrapper">
+    <h1>Enregistrement</h1>
+    <div id="form_register">
+        {% form_theme form 'UserBundle:Form:error.html.twig' %}
+        {{ form_start(form, { 'action': path("fos_user_registration_register"), 'attr': {'onSubmit': 'javascript:return verifFormRegister();', 'novalidate': 'novalidate' }}) }}
+            {{ form_errors(form) }}
+
+
+            <span class="form-register-label">{{ form_label(form.username) }}</span>
+            {{ form_widget(form.username, { 'attr': {'class': 'register-form-input', 'autocomplete': 'off', 'spellcheck': 'false', 'tabindex': '3'}}) }}
+            <span class="form-error" id="error-username">{{ form_errors(form.username) }}</span>
+
+            <span class="form-register-label">{{ form_label(form.email) }}</span>
+            {{ form_widget(form.email, { 'attr': {'class': 'register-form-input', 'placeholder': 'example@xyz.com', 'autocomplete': 'off', 'spellcheck': 'false', 'tabindex': '4'}}) }}
+            <span class="form-error" id="error-email">{{ form_errors(form.email) }}</span>
+
+            <span class="form-register-label">{{ form_label(form.plainPassword.first) }}</span>
+            {{ form_widget(form.plainPassword.first, { 'attr': {'class': 'register-form-input', 'autocomplete': 'off', 'spellcheck': 'false', 'tabindex': '5'}}) }}
+            <div id="password-solidity"><div id="register-pass-status-line1" class="register-pass-status-line"></div><div id="register-pass-status-line2" class="register-pass-status-line"></div><div id="register-pass-status-line3" class="register-pass-status-line"></div><div id="register-pass-status-line4" class="register-pass-status-line"></div><div id="register-pass-status-line5" class="register-pass-status-line"></div></div>
+            <div id="password-strength-level"></div>
+            <div id="password-strength-message"></div>
+            <span class="form-error" id="error-first-password">{{ form_errors(form.plainPassword.first) }}</span>
+
+            <span class="form-register-label">Retapez le mot de passe</span>
+            {{ form_widget(form.plainPassword.second, { 'attr': {'class': 'register-form-input', 'autocomplete': 'off', 'spellcheck': 'false', 'tabindex': '6'}}) }}
+            <span class="form-error" id="error-second-password">{{ form_errors(form.plainPassword.second) }}</span>
+
+            <input type="submit" value="S'enregistrer" id="register-submit" tabindex="7" />
+
+        {{ form_end(form) }}
+    </div>
+
+    <div id="register-infos">
+
+        <h4>Nom d'utilisateur</h4>
+        <p>Votre nom d'utilisateur sera public. Si vous souhaitez rester anonyme, ne mettez pas vos nom et/ou prénom dedans.</p>
+        
+        <h4>Votre compte est aussi sécurisé que votre ordinateur.</h4>
+        <p>N'entrez jamais votre mot de passe sur un périphérique en lequel vous n'avez pas entièrement confiance. Ne vous connectez pas à votre compte sur un ordinateur partagé ou public.</p>
+    </div>
+    
+</div>

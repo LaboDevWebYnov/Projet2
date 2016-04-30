@@ -1,0 +1,263 @@
+*{
+    font-family: 'Open Sans', Tahoma, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+#second-wrapper{
+    margin-left: auto;
+    margin-right: auto;
+    width: 1000px;
+    position: relative;
+    margin-top: 50px
+}
+
+h1{
+    font-size: 24px;
+    font-weight: 400
+}
+
+#register-infos{
+    background-color: #ffffff;
+    width: 450px;
+    position: absolute;
+    top:70px;
+    right:0;
+}
+
+#register-infos p{
+    font-size: 13px;
+    margin: 0;
+    padding: 0 0 30px 0;
+    color: #666666
+}
+
+#register-infos h4{
+    margin: 0;
+    padding: 0;
+    line-height: 40px;
+    height: 40px;
+    color: #333333;
+    font-size: 16px;
+    font-weight: 600
+}
+
+h1 {
+    text-align: left;
+}
+
+#form_register{
+    text-align: left;
+    width: 450px
+}
+
+.register-form-input{
+    width: 380px;
+    height: 30px;
+    border: 1px solid #bababa;
+    font-size: 15px;
+    color: black;
+    margin-bottom: 3px;
+    padding-left: 15px;
+    outline: none;
+}
+
+.register-form-names{
+    width: 180px;
+    height: 30px;
+    border: 1px solid #bababa;
+    font-size: 15px;
+    color: black;
+    margin-bottom: 3px;
+    padding-left: 15px;
+    outline: none;
+}
+
+.register-form-input:focus, .register-form-names:focus{
+    border-color: grey
+}
+
+#register-submit{
+    width: 200px;
+    height: 35px;
+    background-color: dodgerblue;
+    color: white;
+    border: 0;
+    font-size: 15px;
+    outline: none;
+    margin-top: 20px;
+    display: block
+}
+
+.form-error{
+    color: #c85305;
+    font-size: 13px;
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 400px
+}
+
+.form-register-label{
+    font-size: 13px;
+    display: block;
+    margin-top: 15px;
+    width: 150px
+}
+
+// CSS password solidity
+#password-solidity{
+    height: 10px;
+    line-height: 10px;
+}
+
+.register-pass-status-line{
+    display: inline-block;
+    height: 2px;
+    width: 15%;
+    margin-right: 3%;
+    background-color: #cbcacd
+}
+
+.very-weak{
+    display: inline-block;
+    height: 2px;
+    width: 15%;
+    margin-right: 3%;
+    background-color: red
+}
+
+.weak{
+    display: inline-block;
+    height: 2px;
+    width: 15%;
+    margin-right: 3%;
+    background-color: #ffc926
+}
+
+.medium{
+    display: inline-block;
+    height: 2px;
+    width: 15%;
+    margin-right: 3%;
+    background-color: #7ab148
+}
+
+.strong{
+    display: inline-block;
+    height: 2px;
+    width: 15%;
+    margin-right: 3%;
+    background-color: #7dd016
+}
+
+.excellent{
+    display: inline-block;
+    height: 2px;
+    width: 15%;
+    margin-right: 3%;
+    background-color: dodgerblue;
+}
+
+.very-weak-indice{
+    color: #ff2a0b;
+}
+
+.weak-indice{
+    color: #ffc926;
+}
+
+.medium-indice{
+    color: #7ab148;
+}
+
+.strong-indice{
+    color: #7dd016;
+}
+
+.excellent-indice{
+    color: dodgerblue;
+}
+
+#password-strength-level{
+    width: 400px;
+    font-size: 14px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    padding: 0;
+}
+
+#password-strength-message{
+    width: 400px;
+    font-size: 13px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    padding: 0;
+    text-align: justify;
+}
+
+
+// ------------------
+// Fonts
+// ------------------
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Open Sans Light'), local('OpenSans-Light'), url(http://themes.googleusercontent.com/static/fonts/opensans/v8/DXI1ORHCpsQm3Vp6mXoaTXhCUOGz7vYGh680lGh-uXM.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url(http://themes.googleusercontent.com/static/fonts/opensans/v8/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Open Sans Semibold'), local('OpenSans-Semibold'), url(http://themes.googleusercontent.com/static/fonts/opensans/v8/MTP_ySUJH_bn48VBG8sNSnhCUOGz7vYGh680lGh-uXM.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Open Sans Bold'), local('OpenSans-Bold'), url(http://themes.googleusercontent.com/static/fonts/opensans/v8/k3k702ZOKiLJc3WVjuplzHhCUOGz7vYGh680lGh-uXM.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 800;
+  src: local('Open Sans Extrabold'), local('OpenSans-Extrabold'), url(http://themes.googleusercontent.com/static/fonts/opensans/v8/EInbV5DfGHOiMmvb1Xr-hnhCUOGz7vYGh680lGh-uXM.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 300;
+  src: local('Open Sans Light Italic'), local('OpenSansLight-Italic'), url(http://themes.googleusercontent.com/static/fonts/opensans/v8/PRmiXeptR36kaC0GEAetxh_xHqYgAV9Bl_ZQbYUxnQU.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Open Sans Italic'), local('OpenSans-Italic'), url(http://themes.googleusercontent.com/static/fonts/opensans/v8/xjAJXh38I15wypJXxuGMBobN6UDyHWBl620a-IRfuBk.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 600;
+  src: local('Open Sans Semibold Italic'), local('OpenSans-SemiboldItalic'), url(http://themes.googleusercontent.com/static/fonts/opensans/v8/PRmiXeptR36kaC0GEAetxn5HxGBcBvicCpTp6spHfNo.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Open Sans Bold Italic'), local('OpenSans-BoldItalic'), url(http://themes.googleusercontent.com/static/fonts/opensans/v8/PRmiXeptR36kaC0GEAetxjqR_3kx9_hJXbbyU8S6IN0.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 800;
+  src: local('Open Sans Extrabold Italic'), local('OpenSans-ExtraboldItalic'), url(http://themes.googleusercontent.com/static/fonts/opensans/v8/PRmiXeptR36kaC0GEAetxkCDe67GEgBv_HnyvHTfdew.woff) format('woff');
+}

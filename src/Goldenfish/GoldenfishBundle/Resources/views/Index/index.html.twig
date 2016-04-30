@@ -102,41 +102,9 @@
 
                 <div class="col-md-4 wow fadeIn">
                     <div class="pricing text-uppercase">
-                        <div class="pricing-title">
-                            <h4>Inscription</h4>
-                        </div>
-                        <form method="post" action="">
-                            <ul>
-                                <li>
-                                    <p><label for="pseudo">Pseudo :</label><br><input type="text" id="pseudo" name="pseudo"/>
-                                    </p>
-                                </li>
-
-                                <li>
-                                    <p>
-                                        <label for="mail">Adresse e-mail :</label><br>
-                                        <input type="text" id="mail" name="mail" maxlength="200">
-                                        <span id="regEmailAddressError" class="error" style="display:none"></span>
-                                    </p>
-                                </li>
-
-                                <li>
-                                    <p>
-                                        <label for="Password">Mot de passe :</label><br>
-                                        <input type="password" id="Password" name="Password" maxlength="200">
-                                    </p>
-                                </li>
-
-                                <li>
-                                    <p>
-                                        <label for="regPassword2">Confirmation :</label><br>
-                                        <input type="password" id="regPassword2" name="regPassword2" maxlength="200">
-                                    </p>
-                                </li>
-
-                                <input class="btn btn-primary text-uppercase" type="submit" id="button" value="Valider">
-                            </ul>
-                        </form>
+                        
+                            <a href="{{ path('fos_user_registration_register') }}" class="btn btn-primary text-uppercase" id="button">Inscription</a>
+                        
                     </div>
                 </div>
             </div>

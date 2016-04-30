@@ -1,35 +1,14 @@
 <html>
 <head>
-    <!-- bootstrap css -->
-    <link rel="stylesheet" href="../bundles/user/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../../bundles/user/css/registration/style_register.css" type="text/css" />
     
-    <!-- custom css -->
-    <link rel="stylesheet" href="../bundles/user/css/templatemo-style.css" />
-    <link rel="stylesheet" href="../bundles/user/css/custom.css" />
-
 </head>
-<body>
-    <div class="col-md-3"></div>
-    <div class="col-md-3 wow fadeIn">
-        <div class="pricing text-uppercase">
-            <div class="pricing-title">
-                <h4>Inscription</h4>
-            </div>
-            <form action="{{ path('fos_user_registration_register') }}" {{ form_enctype(form) }} method="POST" class="fos_user_registration_register">
-                {{ form_widget(form) }}
-                <div>
-                    <input type="submit" value="{{ 'registration.submit'|trans }}" />
-                </div>
-            </form>
-        </div>
-    </div>
-    <div class="col-md-3"></div>
 
-</body>
-<footer>
-    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>-->
-    <script src="../bundles/user/js/jquery.js"></script>
-    <script src="../bundles/user/js/bootstrap.min.js"></script>
-</footer>
+{% block fos_user_content %}
+        {% include "UserBundle:Registration:register_content.html.twig" %}
+        <script type="text/javascript" src="../../bundles/user/js/registration/register.js"></script>
+        <script type="text/javascript" src="../../bundles/user/js/registration/verif_register.js"></script>
+        <script type="text/javascript" src="../../bundles/user/js/registration/zxcvbn.js"></script>
+        <script type="text/javascript" src="../../bundles/user/js/registration/zxcvbn-async.js"></script>
+{% endblock fos_user_content %}
 </html>
-

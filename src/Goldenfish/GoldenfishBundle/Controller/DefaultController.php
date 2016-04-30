@@ -14,6 +14,7 @@ class DefaultController extends Controller
             return $this->redirectToRoute('UserBundle:Profile:profile.html.twig');
         }*/
 
+        /* Formulaire de connexion */
         $authenticationUtils = $this->get('security.authentication_utils');
 
         $csrfToken = $this->has('form.csrf_provider')
