@@ -24,3 +24,9 @@ remove_trailing_slash:
 list_note:
     path:    /app/list
     defaults: { _controller: GoldenfishBundle:App:viewListNote }
+
+partage_note:
+    path: /partage/{id}
+    defaults: { _controller: GoldenfishBundle:App:partageNote }
+    requirements:
+        id: \d+
