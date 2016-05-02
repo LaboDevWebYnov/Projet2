@@ -1,17 +1,46 @@
 .notes{
-	margin-top: 20px;
-	width: 23.5%;
+	width: 128px;
+    height: 150px;
 	text-align: center;
 	padding: 2px;
-	background-color: #FE9A2E;
+	background-color: white;
 	color: white;
 	display: inline-block;
-	margin-left: 15px;
 	border-radius: 5px;
-
-
-
+    margin: 20px 20px 15px 0px;
+    word-wrap: break-word;
+	vertical-align: top;
 }
+
+.note_icon{
+	width: 120px;
+    height: 110px;
+    border-radius: 6px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    border: 2px solid silver;
+    cursor: default;
+    text-align: center;
+    padding-top: 15px;
+}
+
+.note_title{
+    width: 120px;
+    height: 20px;
+    color: black;
+    font-size: 12px;
+    text-align: center;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 7px;
+    cursor: default;
+}
+
 .noteContent{
 	white-space: nowrap;
     overflow: hidden;
@@ -110,4 +139,41 @@
   text-shadow: 0 1px rgba(black, .3);
   background: #FE9A2E;
   border-radius: 3px;
+}
+
+#title {
+	left: 0;
+    right: 200px;
+    display: block;
+    height: 60px;
+    line-height: 60px;
+    width: 500px;
+    font-size: 30px;
+    font-weight: 300;
+    color: #6f6f6f;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    padding-left: 20px;
+}
+
+#empty_list {
+	left: 0;
+    right: 200px;
+    display: block;
+    height: 60px;
+    line-height: 60px;
+    width: 500px;
+    font-size: 20px;
+    font-weight: 300;
+    color: #6f6f6f;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    padding-left: 20px;
+}
+
+.file_gl{
+	font-size: 70px;
+    color: #ebebeb;
 }
