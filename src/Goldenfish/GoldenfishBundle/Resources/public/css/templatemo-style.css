@@ -197,7 +197,7 @@ img
         background: #f8f8f8;
         text-align: center;
         padding-top: 80px;
-        padding-bottom: 300px;
+        padding-bottom: 20px;
     }
 #pricing h2
     {
@@ -278,7 +278,6 @@ img
         background: url('../images/contact-bg.jpg') no-repeat;
         background-size: cover;
         color: #000;
-        margin-top: 800px;
     }
 #contact h2
     {

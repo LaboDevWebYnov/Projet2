@@ -35,8 +35,8 @@ img
 /* overlay */
 .overlay
 {
-    width: 100%;
-    height: 100%;
+    width: auto;
+    height: 50%;
     background: rgba(0, 0, 0, 0.0);
     padding-top: 90px;
     padding-bottom: 90px;
@@ -54,7 +54,7 @@ img
 }
 .navbar-default .navbar-brand
 {
-    color: #E80317;
+    color: #FF8603;
     font-size: 30px;
     font-weight: bold;
     height: 70px;
@@ -72,7 +72,7 @@ img
 .navbar-default .nav li a:focus,
 .navbar-default .nav li a.current
 {
-    color: #E80317;
+    color: #FF8603;
 }
 
 .navbar-default .navbar-toggle
@@ -82,7 +82,7 @@ img
 }
 .navbar-default .navbar-toggle .icon-bar
 {
-    background: #E80317;
+    background: #FF8603;
     border-color: transparent;
 }
 .navbar-default .navbar-toggle:hover,
@@ -112,7 +112,7 @@ label[for="forget_password"]{
 }
 #home p
 {
-    color: #e80317;
+    color: #FF8603;
     font-weight: 400;
     font-size: x-large;
     font-style: italic;
@@ -120,7 +120,7 @@ label[for="forget_password"]{
 }
 
 #home h2{
-    color: #e80317;
+    color: #FF8603;
 }
 
 #home img
@@ -132,12 +132,12 @@ label[for="forget_password"]{
 
 /* container */
 #pricing .pricing .pricing-title{
-    background: #e80317 none repeat scroll 0 0;
+    background: #FF8603 none repeat scroll 0 0;
 }
 
 #pricing .pricing .btn{
-    border: 1px solid #e80317;
-    color: #e80317;
+    border: 1px solid #FF8603;
+    color: #FF8603;
 }
 
 .connection {
@@ -145,15 +145,15 @@ label[for="forget_password"]{
 }
 
 #pricing .pricing .btn:hover{
-    background: #e80317 none repeat scroll 0 0;
+    background: #FF8603 none repeat scroll 0 0;
 }
 
 #contact input[type="submit"] {
-    background: #e80317 none repeat scroll 0 0;
+    background: #FF8603 none repeat scroll 0 0;
 }
 
 #contact input[type="submit"]:hover {
-    background: #e80317 none repeat scroll 0 0;
+    background: #FF8603 none repeat scroll 0 0;
 }
 
 #contact .form-control {
