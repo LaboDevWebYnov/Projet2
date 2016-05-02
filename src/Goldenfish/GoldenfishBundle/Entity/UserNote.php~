@@ -1,0 +1,78 @@
+<?php
+
+namespace Goldenfish\GoldenfishBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * UserNote
+ *
+ * @ORM\Table()
+ * @ORM\Entity(repositoryClass="Goldenfish\GoldenfishBundle\Entity\UserNoteRepository")
+ */
+class UserNote
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="droit", type="string", length=255)
+     */
+    private $droit;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="Goldenfish\GoldenfishBundle\Entity\Note")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $note;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="Goldenfish\UserBundle\Entity\User")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $user;
+
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set droit
+     *
+     * @param string $droit
+     *
+     * @return UserNote
+     */
+    public function setDroit($droit)
+    {
+        $this->droit = $droit;
+
+        return $this;
+    }
+
+    /**
+     * Get droit
+     *
+     * @return string
+     */
+    public function getDroit()
+    {
+        return $this->droit;
+    }
+}
+

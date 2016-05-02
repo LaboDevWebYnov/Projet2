@@ -43,9 +43,9 @@ class Note
     private $dateCreation;
 
     /**
-     * @ORM\ManyToOne(targetEntity="Goldenfish\UserBundle\Entity\User")
+     * @ORM\OneToMany(targetEntity="Goldenfish\GoldenfishBundle\Entity\UserNote", mappedBy="note")
      */
-    private $user;
+    private $usernote;
 
 
     /**
@@ -107,30 +107,6 @@ class Note
     }
 
     /**
-     * Set user
-     *
-     * @param \Goldenfish\UserBundle\Entity\User $user
-     *
-     * @return Note
-     */
-    public function setUser(\Goldenfish\UserBundle\Entity\User $user = null)
-    {
-        $this->user = $user;
-
-        return $this;
-    }
-
-    /**
-     * Get user
-     *
-     * @return \Goldenfish\UserBundle\Entity\User
-     */
-    public function getUser()
-    {
-        return $this->user;
-    }
-
-    /**
      * Set dateCreation
      *
      * @param \DateTime $dateCreation
@@ -152,5 +128,46 @@ class Note
     public function getDateCreation()
     {
         return $this->dateCreation;
+    }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->usernote = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add usernote
+     *
+     * @param \Goldenfish\GoldenfishBundle\Entity\UserNote $usernote
+     *
+     * @return Note
+     */
+    public function addUsernote(\Goldenfish\GoldenfishBundle\Entity\UserNote $usernote)
+    {
+        $this->usernote[] = $usernote;
+
+        return $this;
+    }
+
+    /**
+     * Remove usernote
+     *
+     * @param \Goldenfish\GoldenfishBundle\Entity\UserNote $usernote
+     */
+    public function removeUsernote(\Goldenfish\GoldenfishBundle\Entity\UserNote $usernote)
+    {
+        $this->usernote->removeElement($usernote);
+    }
+
+    /**
+     * Get usernote
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getUsernote()
+    {
+        return $this->usernote;
     }
 }

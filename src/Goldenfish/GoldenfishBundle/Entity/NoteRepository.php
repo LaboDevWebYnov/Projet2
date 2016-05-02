@@ -15,7 +15,20 @@ class NoteRepository extends \Doctrine\ORM\EntityRepository
 		$qb = $this->_em->createQuery(
 			'SELECT n
 			FROM GoldenfishBundle:Note n
-			WHERE n.user = :id')->setParameter('id', $id);
+			JOIN n.usernote u, GoldenfishBundle:UserNote un
+			WHERE un.user = :id AND un.droit = :droit')->setParameter('id', $id)->setParameter('droit', 'Propriétaire');
+		$results = $qb->getResult();
+
+		return $results;
+	}
+
+	public function getNotePartageWithUser($id)
+	{
+		$qb = $this->_em->createQuery(
+			'SELECT n
+			FROM GoldenfishBundle:Note n
+			JOIN n.usernote u, GoldenfishBundle:UserNote un
+			WHERE un.user = :id AND un.droit = :droit')->setParameter('id', $id)->setParameter('droit', 'Modification');
 		$results = $qb->getResult();
 
 		return $results;

@@ -93,7 +93,7 @@ fos_user:
             enabled: true
             from_email:
                 address:        goldenfishnoteappli@gmail.com
-                sender_name:    Enregistrement GoldenFsh Note
+                sender_name:    Enregistrement GoldenFish Note
             template: email/mail.email.twig
 
     profile:

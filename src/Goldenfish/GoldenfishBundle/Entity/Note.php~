@@ -43,9 +43,9 @@ class Note
     private $dateCreation;
 
     /**
-     * @ORM\ManyToOne(targetEntity="Goldenfish\UserBundle\Entity\User")
+     * @ORM\OneToMany(targetEntity="Goldenfish\GoldenfishBundle\Entity\UserNote", mappedBy="note")
      */
-    private $user;
+    private $usernote;
 
 
     /**
@@ -107,26 +107,26 @@ class Note
     }
 
     /**
-     * Set user
+     * Set dateCreation
      *
-     * @param \Goldenfish\UserBundle\User $user
+     * @param \DateTime $dateCreation
      *
      * @return Note
      */
-    public function setUser(\Goldenfish\UserBundle\User $user = null)
+    public function setDateCreation($dateCreation)
     {
-        $this->user = $user;
+        $this->dateCreation = $dateCreation;
 
         return $this;
     }
 
     /**
-     * Get user
+     * Get dateCreation
      *
-     * @return \Goldenfish\UserBundle\User
+     * @return \DateTime
      */
-    public function getUser()
+    public function getDateCreation()
     {
-        return $this->user;
+        return $this->dateCreation;
     }
 }
