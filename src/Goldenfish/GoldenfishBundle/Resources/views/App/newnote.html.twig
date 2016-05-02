@@ -37,7 +37,7 @@
   <h1 id="header">Nouvelle Note </h1>
   
   <form id="formNewNote" action="{{ path('save_note') }}" method="POST">
-  	<input id="inputNote" name="note_name" placeholder="Name" /> 
+  	<input id="inputNote" name="note_name" placeholder="Name" required /> 
     <textarea id="edit" name="note_content"></textarea>
     <button id="newNote">Submit</button>
     
