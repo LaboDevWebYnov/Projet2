@@ -1,5 +1,6 @@
 
 <link rel="stylesheet" href="../bundles/goldenfish/css/note.css">
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
@@ -16,7 +17,7 @@
 {% for note in listNote %}
 
 	<div class="notes">
-		<div class="note_icon"></div>
+		<div class="note_icon"><span class="glyphicon glyphicon-file file_gl"></span> </div>
     <p class="note_title">{{ note.title }}</p>
 	</div>
   <a href="{{ path('partage_note', {'id': note.id}) }}">Partager</a>
@@ -31,8 +32,8 @@
 {% endif %}
 {% for notepartage in listNotePartage %}
 	<div class="notes">
-		<p>{{ notepartage.title }}</p>
-		<p>{{ notepartage.dateCreation|date('d/m/Y') }}</p>
+		<div class="note_icon"><span class="glyphicon glyphicon-file file_gl"></span> </div>
+    <p class="note_title">{{ notepartage.title }}</p>
 	</div>
 {% endfor %}
         <script type="text/javascript" src="../bundles/goldenfish/js/jquery.js"></script>

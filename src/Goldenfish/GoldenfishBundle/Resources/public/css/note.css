@@ -172,3 +172,8 @@
     box-sizing: border-box;
     padding-left: 20px;
 }
+
+.file_gl{
+	font-size: 70px;
+    color: #ebebeb;
+}
