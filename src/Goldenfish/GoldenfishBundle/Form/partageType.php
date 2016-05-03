@@ -15,8 +15,8 @@ class partageType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('username', 'text')
-            ->add('save', 'submit')
+            ->add('username', 'text', array('label' => "Nom d'utilisateur : "))
+            ->add('save', 'submit', array('label' => "Partager"));
         ;
     }
 
