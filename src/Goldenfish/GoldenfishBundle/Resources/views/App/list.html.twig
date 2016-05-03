@@ -7,18 +7,20 @@
 
 {% block GFN_body %}
 
+<h1 id="title">Mes notes</h1>
+
 {% if listNote is empty %}
 
 <p id="empty_list"> Aucune note </p>
 
 {% endif %}
 
-<h1 id="title">Mes notes</h1>
 {% for note in listNote %}
 
 	<div class="notes">
 		<div class="note_icon"><span class="glyphicon glyphicon-file file_gl"></span> </div>
     <p class="note_title">{{ note.title }}</p>
+    <p class="note_content" id=" {{ note.id }} " style="display:none">{{ note.content }}</p>
 	</div>
   <a href="{{ path('partage_note', {'id': note.id}) }}">Partager</a>
 {% endfor %}

@@ -3,7 +3,30 @@
 <link rel="stylesheet" href="../bundles/goldenfish/css/interface.css">
 <link rel="stylesheet" href="../bundles/goldenfish/css/note.css">
 
- 
+ <!-- Include Font Awesome. -->
+  <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+
+  <!-- Include Editor style. -->
+  <link href="../bundles/goldenfish/froala/css/froala_editor.min.css" rel="stylesheet" type="text/css" />
+  <link href="../bundles/goldenfish/froala/css/froala_style.min.css" rel="stylesheet" type="text/css" />
+
+  <!-- Include Code Mirror style -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.3.0/codemirror.min.css">
+
+  <!-- Include Editor Plugins style. -->
+  <link rel="stylesheet" href="../bundles/goldenfish/froala/css/plugins/char_counter.css">
+  <link rel="stylesheet" href="../bundles/goldenfish/froala/css/plugins/code_view.css">
+  <link rel="stylesheet" href="../bundles/goldenfish/froala/css/plugins/colors.css">
+  <link rel="stylesheet" href="../bundles/goldenfish/froala/css/plugins/emoticons.css">
+  <link rel="stylesheet" href="../bundles/goldenfish/froala/css/plugins/file.css">
+  <link rel="stylesheet" href="../bundles/goldenfish/froala/css/plugins/fullscreen.css">
+  <link rel="stylesheet" href="../bundles/goldenfish/froala/css/plugins/image.css">
+  <link rel="stylesheet" href="../bundles/goldenfish/froala/css/plugins/image_manager.css">
+  <link rel="stylesheet" href="../bundles/goldenfish/froala/css/plugins/line_breaker.css">
+  <link rel="stylesheet" href="../bundles/goldenfish/froala/css/plugins/quick_insert.css">
+  <link rel="stylesheet" href="../bundles/goldenfish/froala/css/plugins/table.css">
+  <link rel="stylesheet" href="../bundles/goldenfish/froala/css/plugins/video.css">
+  <link rel="stylesheet" href="../bundles/goldenfish/css/note.css">
 
 </head>
 {% block GFN_body %}
@@ -67,7 +90,8 @@
             <textarea  class="textareaNote containerNote ">
                 
             </textarea>
-             <button type="button" class="btn btn-primary btnModifier" id="myModalChange">Modifier</button>
+            <p style="display:none;" class="note_id"></p>
+             <button type="button" class="btn btn-primary btnModifier" id="myModalChange" onClick="">Modifier</button>
              <button type="button" class="btn btn-primary btnValider" id="myModalChange">Valider</button>
         </div>
         <div class="modal-footer">
@@ -80,21 +104,37 @@
 
 
 
-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      
+        
+
+        <div class="container">
+
+          <!-- Modal -->
+          
+
+          
+        </div>
+
+          <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="../bundles/goldenfish/js/bootstrap.min.js"></script>
         <script src="../bundles/goldenfish/js/note.js"></script>
         <script type="text/javascript" src="../bundles/goldenfish/js/jquery.js"></script>
-        
 
-        <div class="container">
+        <!-- FROALA EDITOR -->
+         <!-- Include JS files. -->
+          <script type="text/javascript" src="../bundles/goldenfish/froala/js/froala_editor.min.js"></script>
 
-  <!-- Modal -->
-  
+          <!-- Include Code Mirror. -->
+          <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.3.0/codemirror.min.js"></script>
+          <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.3.0/mode/xml/xml.min.js"></script>
 
-  
-</div>
+         <!-- Include Plugins. -->
+          <script type="text/javascript" src="../bundles/goldenfish/froala/js/plugins/save.min.js"></script>
 
-	
+          <!-- Include Language file if we want to use it. -->
+          <script type="text/javascript" src="../bundles/goldenfish/froala/js/languages/ro.js"></script>
+
+
 {% endblock %}
