@@ -1,8 +1,21 @@
 <head>
 <link rel="stylesheet" href="../bundles/goldenfish/css/bootstrap.min.css">
 <link rel="stylesheet" href="../bundles/goldenfish/css/interface.css">
+<link rel="stylesheet" href="../bundles/goldenfish/css/note.css">
 </head>
 
-{{ form_start(form) }}
-{{ form_widget(form) }}
-{{ form_end(form) }}
+<body>
+
+<div id="partage-content">
+<h4>Partager : {{ note_name }}</h4>
+
+	<p>Rentrez le nom d'utilisateur de la personne à qui vous voulez partager votre note : </p>
+
+	<div>
+
+	{{ form_start(form) }}
+	{{ form_widget(form) }}
+	{{ form_end(form) }}
+	</div>
+</div>
+</body>

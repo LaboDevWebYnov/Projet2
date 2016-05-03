@@ -181,3 +181,27 @@
 .edit_note_content{
   height: 150px;
 }
+
+
+/* PARTAGE */
+#partage-content{
+    top:70px;
+    right:0;
+}
+
+#partage-content p{
+    font-size: 13px;
+    margin: 0;
+    padding: 0 0 30px 0;
+    color: #666666
+}
+
+#partage-content h1{
+    margin: 0;
+    padding: 0;
+    line-height: 40px;
+    height: 40px;
+    color: #333333;
+    font-size: 16px;
+    font-weight: 600
+}

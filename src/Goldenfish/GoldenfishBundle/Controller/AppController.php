@@ -137,6 +137,8 @@ class AppController extends Controller
         }
 
         return $this->render('GoldenfishBundle:App:partage.html.twig', array(
-            'form' => $form->createView()));
+            'form' => $form->createView(),
+            'note_name' => $note->getTitle()
+            ));
     }
 }
