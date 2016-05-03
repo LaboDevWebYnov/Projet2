@@ -22,7 +22,6 @@
     <p class="note_title">{{ note.title }}</p>
     <p class="note_content" id=" {{ note.id }} " style="display:none">{{ note.content }}</p>
 	</div>
-  <a href="{{ path('partage_note', {'id': note.id}) }}">Partager</a>
 {% endfor %}
 
 

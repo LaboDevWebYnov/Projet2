@@ -7,7 +7,6 @@
         $('.containerNote').html(divNote); 
         $('.textareaNote').css('display','none');
         
-        $('.btnValider').css('display','none');
 
         var idNote = $(this).children( ".note_content" ).attr('id');
         $('.note_id').html(idNote); 
@@ -30,12 +29,12 @@
     });
 
 
-        $(document).on('click', '.btnValider', function(e){ // Quand on valide la modification
-    	var divNote = $(this).text(); 
-    		$('.btnValider').css('display','none');
-    		$('.btnModifier').css('display','block');
+        $(document).on('click', '.btnPartager', function(e){ // Quand on valide la modification
+        	var idNote = parseInt($(".note_id").text());
+            var URL = "partage/" + idNote;
 
- 	        $('.textareaNote').css('display','none');
+            $("#corps").load(URL);
+            $("#modalnote").modal('toggle');
     });
     
 
