@@ -93,11 +93,13 @@ class AppController extends Controller
                     $usernote->setNote($note);
                     $usernote->setUser($user);
                     $usernote->setDroit('Modification');
+
+                    $em->persist($usernote);
+
+                    $em->flush();
                 }
 
-            $em->persist($usernote);
-
-            $em->flush();
+            
 
             return $this->redirect($this->generateUrl('application_interface'));
         }
