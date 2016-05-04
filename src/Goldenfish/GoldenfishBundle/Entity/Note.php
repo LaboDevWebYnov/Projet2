@@ -43,6 +43,13 @@ class Note
     private $dateCreation;
 
     /**
+     * @var date
+     *
+     * @ORM\Column(name="dateUpdate", type="date")
+     */
+    private $dateUpdate;
+
+    /**
      * @ORM\OneToMany(targetEntity="Goldenfish\GoldenfishBundle\Entity\UserNote", mappedBy="note")
      */
     private $usernote;
@@ -129,6 +136,32 @@ class Note
     {
         return $this->dateCreation;
     }
+
+
+/**
+     * Set dateUpdate
+     *
+     * @param \DateTime $dateUpdate
+     *
+     * @return Note
+     */
+    public function setDateUpdate($dateUpdate)
+    {
+        $this->dateUpdate = $dateUpdate;
+
+        return $this;
+    }
+
+    /**
+     * Get dateUpdate
+     *
+     * @return \DateTime
+     */
+    public function getDateUpdate()
+    {
+        return $this->dateUpdate;
+    }
+
     /**
      * Constructor
      */

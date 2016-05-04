@@ -52,7 +52,7 @@
 	opacity: 0.7; 
 } 
 #formNewNote{
-	 width: 40%;
+	  width: 60%;
     padding:30px;
     margin:40px auto;
     background: #FFF;
@@ -90,7 +90,7 @@
 }
 #inputNote{
 	margin-bottom: 3%;
-	width: 20%;
+	width: 200px;
 	padding: 15px 25px;
 	
 	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
@@ -176,4 +176,32 @@
 .file_gl{
 	font-size: 70px;
     color: #ebebeb;
+}
+
+.edit_note_content{
+  height: 150px;
+}
+
+
+/* PARTAGE */
+#partage-content{
+    top:70px;
+    right:0;
+}
+
+#partage-content p{
+    font-size: 13px;
+    margin: 0;
+    padding: 0 0 30px 0;
+    color: #666666
+}
+
+#partage-content h1{
+    margin: 0;
+    padding: 0;
+    line-height: 40px;
+    height: 40px;
+    color: #333333;
+    font-size: 16px;
+    font-weight: 600
 }

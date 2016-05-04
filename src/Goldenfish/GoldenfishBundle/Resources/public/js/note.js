@@ -1,34 +1,40 @@
  $(document).ready(function(){
 
     $(document).on('click', '.notes', function(e){ // quand on clique sur la div de noe
-    	var divNote = $(this).text(); 
+    	var divNote = $(this).children( ".note_content" ).text(); 
  	
         $("#modalnote").modal();
         $('.containerNote').html(divNote); 
         $('.textareaNote').css('display','none');
         
-        $('.btnValider').css('display','none');
 
+        var idNote = $(this).children( ".note_content" ).attr('id');
+        $('.note_id').html(idNote); 
         
     });
 
-        $(document).on('click', '.btnModifier', function(e){ // quand on clique sur modifiuer
-    	var divNote = $(this).text(); 
-    		$('.btnValider').css('display','block');
-    		$('.btnModifier').css('display','none');
+        $(document).on('click', '.btnModifier', function(e){ // quand on clique sur modifier
+    	   
+    		//$('.btnValider').css('display','block');
+    		//$('.btnModifier').css('display','none');
 
- 	        $('.textareaNote').css('display','block');
+ 	       /* $('.textareaNote').css('display','block');
  	        $('.textareaNote').css('width','500px');
- 	        $('.textareaNote').css('height','150px');
+ 	        $('.textareaNote').css('height','150px');*/
+            var idNote = parseInt($(".note_id").text());
+            var URL = "app/add/" + idNote;
+
+            $("#corps").load(URL);
+            $("#modalnote").modal('toggle');
     });
 
 
-        $(document).on('click', '.btnValider', function(e){ // Quand on valide la modification
-    	var divNote = $(this).text(); 
-    		$('.btnValider').css('display','none');
-    		$('.btnModifier').css('display','block');
+        $(document).on('click', '.btnPartager', function(e){ // Quand on valide la modification
+        	var idNote = parseInt($(".note_id").text());
+            var URL = "partage/" + idNote;
 
- 	        $('.textareaNote').css('display','none');
+            $("#corps").load(URL);
+            $("#modalnote").modal('toggle');
     });
     
 
@@ -52,3 +58,4 @@
     $("#corps").load("app/list"); 
 
 });
+

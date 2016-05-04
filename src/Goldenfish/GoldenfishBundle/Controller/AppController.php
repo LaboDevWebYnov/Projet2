@@ -21,7 +21,11 @@ class AppController extends Controller
             'user' => $user));
     }
     public function addNoteAction(){
-        return $this->render('GoldenfishBundle:App:newnote.html.twig');
+        return $this->render('GoldenfishBundle:App:newnote.html.twig', array(
+            'title' => "",
+            'content' => "",
+            'status' => "insert"
+        ));
     }
     public function saveNoteAction(Request $request){
         //if ($request->getMethod() == 'POST') {
@@ -32,22 +36,52 @@ class AppController extends Controller
 
         $user = $this->container->get('security.context')->getToken()->getUser();
 
-        $note = new Note();
-        $note->setTitle($data->get('note_name'));
-        $note->setContent($data->get('note_content'));
-        $note->setDateCreation(new \DateTime());
+        //INSERT NOTE
+        if( $data->get('status') == "insert" ){
 
-        $usernote = new UserNote();
-        $usernote->setNote($note);
-        $usernote->setUser($user);
-        $usernote->setDroit('Propriétaire');
+            $note = new Note();
+            $note->setTitle($data->get('note_name'));
+            $note->setContent($data->get('note_content'));
+            $note->setDateCreation(new \DateTime());
+            $note->setDateUpdate(new \DateTime());
 
-        $em->persist($usernote);
-        $em->persist($note);
-        $em->flush();
+            $usernote = new UserNote();
+            $usernote->setNote($note);
+            $usernote->setUser($user);
+            $usernote->setDroit('Propriétaire');
+
+            $em->persist($usernote);
+            $em->persist($note);
+            $em->flush();
+        }
+        elseif (substr($data->get('status'), 0, 6) == "update"){
+            $noteID = explode("|", $data->get('status'))[1];
+
+            $note = $em->getRepository('GoldenfishBundle:Note')->find($noteID);
+            if($note){
+                $note->setTitle($data->get('note_name'));
+                $note->setContent($data->get('note_content'));
+                $note->setDateUpdate(new \DateTime());
+
+                $em->persist($note);
+                $em->flush();
+            }
+        }
 
         return $this->redirectToRoute('application_interface');
 
+    }
+
+    public function modifNoteAction($id, Request $request){
+
+        $em = $this->getDoctrine()->getManager();
+
+        $note = $em->getRepository('GoldenfishBundle:Note')->find($id);
+        return $this->render('GoldenfishBundle:App:newnote.html.twig', array(
+            'title' => $note->getTitle(),
+            'content' => $note->getContent(),
+            'status' => "update|" . $note->getId()
+        ));
     }
 
     public function viewListNoteAction()
@@ -105,6 +139,8 @@ class AppController extends Controller
         }
 
         return $this->render('GoldenfishBundle:App:partage.html.twig', array(
-            'form' => $form->createView()));
+            'form' => $form->createView(),
+            'note_name' => $note->getTitle()
+            ));
     }
 }

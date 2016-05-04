@@ -34,11 +34,17 @@
   
   <!-- Create a tag that we will use as the editable area.
        You can use a div tag as well. -->
+
+  {% if status == 'insert' %}
   <h1 id="header">Nouvelle Note </h1>
-  
+  {% else %}
+  <h1 id="header">Modifier Note </h1>
+  {% endif %}
+
   <form id="formNewNote" action="{{ path('save_note') }}" method="POST">
-  	<input id="inputNote" name="note_name" placeholder="Name" required /> 
-    <textarea id="edit" name="note_content"></textarea>
+  	<input id="inputNote" name="note_name" placeholder="Nom de ma note" maxlength="30" value="{{ title }}" required /> 
+    <textarea id="edit" class="edit_note_content" name="note_content" >{{ content }}</textarea>
+    <input type="hidden" name="status" value="{{ status }}"/>
     <button id="newNote">Submit</button>
     
   </form>

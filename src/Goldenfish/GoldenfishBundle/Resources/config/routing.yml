@@ -7,8 +7,14 @@ application_interface:
     defaults: { _controller: GoldenfishBundle:App:indexApp}
 
 add_note:
-    path:    /app/add
+    path:    /app/add/
     defaults: { _controller: GoldenfishBundle:App:addNote}
+
+modif_note:
+    path:    /app/add/{id}
+    defaults: { _controller: GoldenfishBundle:App:modifNote}
+    requirements:
+        id: \d+
 
 save_note:
     path:    /app/save
